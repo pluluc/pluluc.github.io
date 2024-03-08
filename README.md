@@ -1,3 +1,3 @@
 # myself-with-html-css
-Site básico de apresentação utilizando de html e css.
+Aprendendo HTML + JS
 Acesse a página aqui: https://pluluc.github.io/
