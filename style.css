@@ -1,0 +1,80 @@
+/* comentário aqui é o mesmo do C */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body * {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
+
+body {
+  background-image: url(/assets/new_bg.svg);
+  background-color: #fdcae1;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+#list {
+  /*Caso eu aplique padding a uma caixa, todos os seus filhos vão receber também,
+  com isso, consigo ajustar todos os elementos*/
+  width: 360px;
+  height: 270px;
+  margin: auto;
+}
+#list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#list ul a {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 24px;
+  background: rgba(59, 44, 44, 07);
+  border: 1px solid rgb(255, 197, 37);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.8s;
+}
+#list ul li a:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#header {
+  margin-bottom: 10px;
+}
+
+#header img {
+  border-radius: 50%;
+  border: 2px solid rgb(255, 197, 37);
+  padding: 6px;
+}
+#header img:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transition: background 0.8s;
+}
+
+#header h1 {
+  font-weight: 500px;
+  font-size: 40px;
+  /*line-height: 24px;*/
+  padding: 24px;
+}
+
+#header p {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 10px;
+}
