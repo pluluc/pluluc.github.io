@@ -2,7 +2,7 @@
 
 :root {
   --text-color: black;
-  --bg-url: url(./assets/new_bg.svg);
+  --bg-url: url(./assets/bg_light_final.svg);
   --stroke-color: rgb(255, 197, 37);
   --surface-color: rgba(0, 0, 0, 0.8);
   --switch-bg-url: url(assets/bg_button_light.svg);
@@ -10,7 +10,7 @@
 
 .dark {
   --text-color: white;
-  --bg-url: url(./assets/bg_dark.svg);
+  --bg-url: url(./assets/bg_dark_final.svg);
   --stroke-color: rgb(255, 197, 37);
   --surface-color: rgba(0, 0, 0, 0.8);
   --switch-bg-url: url(assets/bg_button_dark.svg);
