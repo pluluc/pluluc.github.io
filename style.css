@@ -1,5 +1,21 @@
 /* comentário aqui é o mesmo do C */
 
+:root {
+  --text-color: black;
+  --bg-url: url(./assets/new_bg.svg);
+  --stroke-color: rgb(255, 197, 37);
+  --surface-color: rgba(0, 0, 0, 0.8);
+  --switch-bg-url: url(assets/bg_button_light.svg);
+}
+
+.dark {
+  --text-color: white;
+  --bg-url: url(./assets/bg_dark.svg);
+  --stroke-color: rgb(255, 197, 37);
+  --surface-color: rgba(0, 0, 0, 0.8);
+  --switch-bg-url: url(assets/bg_button_dark.svg);
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -9,11 +25,11 @@ body * {
   font-family: "Quattrocento Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: rgb(0, 0, 0);
+  color: var(--text-color);
 }
 
 body {
-  background-image: url(/assets/new_bg.svg);
+  background-image: var(--bg-url);
   background-color: #fdcae1;
   background-repeat: no-repeat;
   background-position: top center;
@@ -24,7 +40,7 @@ body {
   /*Caso eu aplique padding a uma caixa, todos os seus filhos vão receber também,
   com isso, consigo ajustar todos os elementos*/
   width: 360px;
-  height: 270px;
+  height: 250px;
   margin: auto;
 }
 #list ul {
@@ -41,7 +57,7 @@ body {
   align-items: center;
   padding: 16px 24px;
   background: rgba(59, 44, 44, 07);
-  border: 1px solid rgb(255, 197, 37);
+  border: 1px solid var(--stroke-color);
   border-radius: 8px;
   backdrop-filter: blur(6px);
   text-decoration: none;
@@ -49,7 +65,7 @@ body {
   transition: background 0.8s;
 }
 #list ul li a:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--surface-color);
 }
 
 #header {
@@ -77,4 +93,68 @@ body {
   font-size: 24px;
   line-height: 24px;
   margin-bottom: 10px;
+}
+
+#social-logos {
+  display: flex;
+  justify-content: center;
+  padding-top: 24px 0px;
+  font-size: 24px;
+}
+
+#social-logos a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-logos a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 12px 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+#switch {
+  margin: 4px auto;
+  height: 35px;
+  width: 64px;
+  position: relative;
+}
+
+#switch button {
+  height: 32px;
+  width: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-65%);
+}
+
+.dark #switch button {
+  right: 0;
+  left: initial;
+}
+
+#switch span {
+  margin: auto;
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
